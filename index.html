@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IA na Educação - Apoio Pedagógico Inteligente</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome CDN para ícones -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+  />
+
+  <style>
+    .hero-bg {
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=2070&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .tool-icon {
+      transition: all 0.3s ease;
+    }
+
+    .tool-icon:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-50">
+
+  <!-- Header / Hero -->
+  <header
+    class="hero-bg text-white py-20 px-4 md:px-10 lg:px-20 text-center"
+  >
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+      Inteligência Artificial na Educação
+    </h1>
+    <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+      Transformando a aprendizagem e o ensino com o poder da IA
+    </p>
+    <a
+      href="#beneficios"
+      class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 inline-block"
+      >Saiba Mais</a
+    >
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-12">
+    <!-- Introdução -->
+    <section class="mb-16 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+        Como a IA está revolucionando a educação
+      </h2>
+      <p class="text-lg text-gray-600 max-w-4xl mx-auto">
+        A Inteligência Artificial está transformando a maneira como ensinamos e
+        aprendemos, oferecendo ferramentas poderosas para personalizar a
+        educação, automatizar tarefas repetitivas e fornecer insights valiosos
+        sobre o processo de aprendizagem.
+      </p>
+    </section>
+
+    <!-- Para Professores -->
+    <section id="beneficios" class="mb-20">
+      <div
+        class="flex flex-col lg:flex-row items-center gap-10 mb-12"
+      >
+        <div class="lg:w-1/2">
+          <img
+            src="https://tse4.mm.bing.net/th?id=OIP.2UD_v4e5ArbhfuyedluZoAHaEJ&pid=Api&P=0&h=180"
+            alt="Professor usando IA"
+            class="rounded-lg shadow-lg w-full h-auto object-cover"
+          />
+        </div>
+        <div class="lg:w-1/2">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">Para Professores</h2>
+          <div class="space-y-4">
+            <div
+              class="p-6 bg-white rounded-lg shadow-md card-hover transition duration-300"
+            >
+              <h3
+                class="text-xl font-semibold text-blue-600 mb-2 flex items-center gap-2"
+              >
+                <i class="fas fa-tasks"></i>Criação de Atividades
+              </h3>
+              <p class="text-gray-600">
+                A IA pode gerar exercícios personalizados de acordo com o nível
+                da turma e objetivos de aprendizagem, economizando tempo valioso.
+              </p>
+            </div>
+            <div
+              class="p-6 bg-white rounded-lg shadow-md card-hover transition duration-300"
+            >
+              <h3
+                class="text-xl font-semibold text-blue-600 mb-2 flex items-center gap-2"
+              >
+                <i class="fas fa-check-double"></i>Correção Automática
+              </h3>
+              <p class="text-gray-600">
+                Sistemas de IA podem corrigir provas objetivas e até mesmo avaliar
+                respostas dissertativas com alto grau de precisão.
+              </p>
+            </div>
+            <div
+              class="p-6 bg-white rounded-lg shadow-md card-hover transition duration-300"
+            >
+              <h3
+                class="text-xl font-semibold text-blue-600 mb-2 flex items-center gap-2"
+              >
+                <i class="fas fa-calendar-alt"></i>Planos de Aula
+              </h3>
+              <p class="text-gray-600">
+                Ferramentas inteligentes sugerem sequências didáticas e materiais
+                complementares baseados no currículo e perfil dos alunos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Para Alunos -->
+    <section class="mb-20">
+      <div class="flex flex-col lg:flex-row-reverse items-center gap-10">
+        <div class="lg:w-1/2">
+          <img
+            src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=1471&q=80"
+            alt="Aluno estudando com tecnologia"
+            class="rounded-lg shadow-lg w-full h-auto object-cover"
+          />
+        </div>
+        <div class="lg:w-1/2">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">Para Alunos</h2>
+          <div class="space-y-4">
+            <div
+              class="p-6 bg-white rounded-lg shadow-md card-hover transition duration-300"
+            >
+              <h3
+                class="text-xl font-semibold text-green-600 mb-2 flex items-center gap-2"
+              >
+                <i class="fas fa-robot"></i>Tutores Virtuais
+              </h3>
+              <p class="text-gray-600">
+                Assistentes de IA estão disponíveis 24 horas para tirar dúvidas,
+                explicar conceitos e oferecer exercícios práticos.
+              </p>
+            </div>
+            <div
+              class="p-6 bg-white rounded-lg shadow-md card-hover transition duration-300"
+            >
+              <h3
+                class="text-xl font-semibold text-green-600 mb-2 flex items-center gap-2"
+              >
+                <i class="fas fa-user-graduate"></i>Aprendizado Personalizado
+              </h3>
+              <p class="text-gray-600">
+                Sistemas adaptativos identificam pontos fortes e fracos do aluno,
+                ajustando o conteúdo para maximizar o aprendizado.
+              </p>
+            </div>
+            <div
+              class="p-6 bg-white rounded-lg shadow-md card-hover transition duration-300"
+            >
+              <h3
+                class="text-xl font-semibold text-green-600 mb-2 flex items-center gap-2"
+              >
+                <i class="fas fa-file-alt"></i>Resumos Automáticos
+              </h3>
+              <p class="text-gray-600">
+                Ferramentas de IA podem sintetizar textos longos em resumos
+                concisos, destacando os pontos mais importantes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ferramentas de IA -->
+    <section class="mb-20 text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-12">
+        Ferramentas de IA para Educação
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <a
+          href="https://chat.openai.com"
+          target="_blank"
+          class="group bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 flex flex-col items-center"
+          rel="noopener noreferrer"
+        >
+          <div class="w-20 h-20 mb-6 flex items-center justify-center tool-icon">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"
+              alt="ChatGPT Logo"
+              class="w-16 h-16 object-contain"
+            />
+          </div>
+          <h3
+            class="text-xl font-semibold text-gray-800 mb-2 group-hover:text-green-600 transition"
+          >
+            ChatGPT
+          </h3>
+          <p class="text-gray-600">
+            Assistente de IA para tirar dúvidas, criar conteúdos e ajudar no
+            aprendizado.
+          </p>
+        </a>
+
+        <a
+          href="https://www.grammarly.com"
+          target="_blank"
+          class="group bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 flex flex-col items-center"
+          rel="noopener noreferrer"
+        >
+          <div class="w-20 h-20 mb-6 flex items-center justify-center tool-icon">
+            <i class="fas fa-spell-check text-6xl text-purple-600"></i>
+          </div>
+          <h3
+            class="text-xl font-semibold text-gray-800 mb-2 group-hover:text-purple-600 transition"
+          >
+            Grammarly
+          </h3>
+          <p class="text-gray-600">
+            Correção gramatical e sugestões para textos em inglês.
+          </p>
+        </a>
+
+        <a
+          href="https://quizlet.com"
+          target="_blank"
+          class="group bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 flex flex-col items-center"
+          rel="noopener noreferrer"
+        >
+          <div class="w-20 h-20 mb-6 flex items-center justify-center tool-icon">
+            <i class="fas fa-flask text-6xl text-yellow-600"></i>
+          </div>
+          <h3
+            class="text-xl font-semibold text-gray-800 mb-2 group-hover:text-yellow-600 transition"
+          >
+            Quizlet
+          </h3>
+          <p class="text-gray-600">Flashcards e jogos para reforçar o aprendizado.</p>
+        </a>
+
+        <a
+          href="https://khanacademy.org"
+          target="_blank"
+          class="group bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 flex flex-col items-center"
+          rel="noopener noreferrer"
+        >
+          <div class="w-20 h-20 mb-6 flex items-center justify-center tool-icon">
+            <i class="fas fa-chalkboard-teacher text-6xl text-blue-600"></i>
+          </div>
+          <h3
+            class="text-xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition"
+          >
+            Khan Academy
+          </h3>
+          <p class="text-gray-600">
+            Plataforma educacional com vídeos e exercícios gratuitos.
+          </p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 py-6 text-center text-gray-600 text-sm">
+  
+                <div class="mb-6 md:mb-0">
+                    <h4 class="text-lg font-semibold mb-4">Créditos</h4>
+                    <ul class="space-y-2">
+                        <li>Lucas</li>
+                        <li>Gustavo</li>
+                        <li>Henrique</li>
+                        <li>Raul</li>
+                        <li>Akira</li>
+                    </ul>
+                </div>
+                </footer>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=Gusta13/ianaeduca-o" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
