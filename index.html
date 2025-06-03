@@ -1,296 +1,561 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>IA na Educação - Apoio Pedagógico Inteligente</title>
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Font Awesome CDN para ícones -->
-  <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    rel="stylesheet"
-  />
-
-  <style>
-    .hero-bg {
-      background-image: linear-gradient(
-          rgba(0, 0, 0, 0.5),
-          rgba(0, 0, 0, 0.5)
-        ),
-        url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=2070&q=80');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    .card-hover:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    }
-
-    .tool-icon {
-      transition: all 0.3s ease;
-    }
-
-    .tool-icon:hover {
-      transform: scale(1.1);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA na Educação - O Futuro da Aprendizagem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #6B73FF 0%, #000DFF 50%, #00D4FF 100%);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .section-divider {
+            position: relative;
+            height: 80px;
+            overflow: hidden;
+        }
+        
+        .section-divider::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 100%;
+            background: linear-gradient(135deg, #00D4FF 0%, #6B73FF 50%, #000DFF 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+        }
+        
+        .neural-network {
+            position: relative;
+            height: 200px;
+        }
+        
+        .neuron {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #4F46E5;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(79, 70, 229, 0.7);
+        }
+        
+        .connection {
+            position: absolute;
+            background: rgba(79, 70, 229, 0.3);
+            height: 2px;
+            transform-origin: 0 0;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0.3;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+    </style>
 </head>
-<body class="font-sans bg-gray-50">
-
-  <!-- Header / Hero -->
-  <header
-    class="hero-bg text-white py-20 px-4 md:px-10 lg:px-20 text-center"
-  >
-    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-      Inteligência Artificial na Educação
-    </h1>
-    <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-      Transformando a aprendizagem e o ensino com o poder da IA
-    </p>
-    <a
-      href="#beneficios"
-      class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 inline-block"
-      >Saiba Mais</a
-    >
-  </header>
-
-  <!-- Main Content -->
-  <main class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-12">
-    <!-- Introdução -->
-    <section class="mb-16 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-        Como a IA está revolucionando a educação
-      </h2>
-      <p class="text-lg text-gray-600 max-w-4xl mx-auto">
-        A Inteligência Artificial está transformando a maneira como ensinamos e
-        aprendemos, oferecendo ferramentas poderosas para personalizar a
-        educação, automatizar tarefas repetitivas e fornecer insights valiosos
-        sobre o processo de aprendizagem.
-      </p>
-    </section>
-
-    <!-- Para Professores -->
-    <section id="beneficios" class="mb-20">
-      <div
-        class="flex flex-col lg:flex-row items-center gap-10 mb-12"
-      >
-        <div class="lg:w-1/2">
-          <img
-            src="https://tse4.mm.bing.net/th?id=OIP.2UD_v4e5ArbhfuyedluZoAHaEJ&pid=Api&P=0&h=180"
-            alt="Professor usando IA"
-            class="rounded-lg shadow-lg w-full h-auto object-cover"
-          />
-        </div>
-        <div class="lg:w-1/2">
-          <h2 class="text-3xl font-bold text-gray-800 mb-6">Para Professores</h2>
-          <div class="space-y-4">
-            <div
-              class="p-6 bg-white rounded-lg shadow-md card-hover transition duration-300"
-            >
-              <h3
-                class="text-xl font-semibold text-blue-600 mb-2 flex items-center gap-2"
-              >
-                <i class="fas fa-tasks"></i>Criação de Atividades
-              </h3>
-              <p class="text-gray-600">
-                A IA pode gerar exercícios personalizados de acordo com o nível
-                da turma e objetivos de aprendizagem, economizando tempo valioso.
-              </p>
-            </div>
-            <div
-              class="p-6 bg-white rounded-lg shadow-md card-hover transition duration-300"
-            >
-              <h3
-                class="text-xl font-semibold text-blue-600 mb-2 flex items-center gap-2"
-              >
-                <i class="fas fa-check-double"></i>Correção Automática
-              </h3>
-              <p class="text-gray-600">
-                Sistemas de IA podem corrigir provas objetivas e até mesmo avaliar
-                respostas dissertativas com alto grau de precisão.
-              </p>
-            </div>
-            <div
-              class="p-6 bg-white rounded-lg shadow-md card-hover transition duration-300"
-            >
-              <h3
-                class="text-xl font-semibold text-blue-600 mb-2 flex items-center gap-2"
-              >
-                <i class="fas fa-calendar-alt"></i>Planos de Aula
-              </h3>
-              <p class="text-gray-600">
-                Ferramentas inteligentes sugerem sequências didáticas e materiais
-                complementares baseados no currículo e perfil dos alunos.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Para Alunos -->
-    <section class="mb-20">
-      <div class="flex flex-col lg:flex-row-reverse items-center gap-10">
-        <div class="lg:w-1/2">
-          <img
-            src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=1471&q=80"
-            alt="Aluno estudando com tecnologia"
-            class="rounded-lg shadow-lg w-full h-auto object-cover"
-          />
-        </div>
-        <div class="lg:w-1/2">
-          <h2 class="text-3xl font-bold text-gray-800 mb-6">Para Alunos</h2>
-          <div class="space-y-4">
-            <div
-              class="p-6 bg-white rounded-lg shadow-md card-hover transition duration-300"
-            >
-              <h3
-                class="text-xl font-semibold text-green-600 mb-2 flex items-center gap-2"
-              >
-                <i class="fas fa-robot"></i>Tutores Virtuais
-              </h3>
-              <p class="text-gray-600">
-                Assistentes de IA estão disponíveis 24 horas para tirar dúvidas,
-                explicar conceitos e oferecer exercícios práticos.
-              </p>
-            </div>
-            <div
-              class="p-6 bg-white rounded-lg shadow-md card-hover transition duration-300"
-            >
-              <h3
-                class="text-xl font-semibold text-green-600 mb-2 flex items-center gap-2"
-              >
-                <i class="fas fa-user-graduate"></i>Aprendizado Personalizado
-              </h3>
-              <p class="text-gray-600">
-                Sistemas adaptativos identificam pontos fortes e fracos do aluno,
-                ajustando o conteúdo para maximizar o aprendizado.
-              </p>
-            </div>
-            <div
-              class="p-6 bg-white rounded-lg shadow-md card-hover transition duration-300"
-            >
-              <h3
-                class="text-xl font-semibold text-green-600 mb-2 flex items-center gap-2"
-              >
-                <i class="fas fa-file-alt"></i>Resumos Automáticos
-              </h3>
-              <p class="text-gray-600">
-                Ferramentas de IA podem sintetizar textos longos em resumos
-                concisos, destacando os pontos mais importantes.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Ferramentas de IA -->
-    <section class="mb-20 text-center">
-      <h2 class="text-3xl font-bold text-gray-800 mb-12">
-        Ferramentas de IA para Educação
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <a
-          href="https://chat.openai.com"
-          target="_blank"
-          class="group bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 flex flex-col items-center"
-          rel="noopener noreferrer"
-        >
-          <div class="w-20 h-20 mb-6 flex items-center justify-center tool-icon">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"
-              alt="ChatGPT Logo"
-              class="w-16 h-16 object-contain"
-            />
-          </div>
-          <h3
-            class="text-xl font-semibold text-gray-800 mb-2 group-hover:text-green-600 transition"
-          >
-            ChatGPT
-          </h3>
-          <p class="text-gray-600">
-            Assistente de IA para tirar dúvidas, criar conteúdos e ajudar no
-            aprendizado.
-          </p>
-        </a>
-
-        <a
-          href="https://www.grammarly.com"
-          target="_blank"
-          class="group bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 flex flex-col items-center"
-          rel="noopener noreferrer"
-        >
-          <div class="w-20 h-20 mb-6 flex items-center justify-center tool-icon">
-            <i class="fas fa-spell-check text-6xl text-purple-600"></i>
-          </div>
-          <h3
-            class="text-xl font-semibold text-gray-800 mb-2 group-hover:text-purple-600 transition"
-          >
-            Grammarly
-          </h3>
-          <p class="text-gray-600">
-            Correção gramatical e sugestões para textos em inglês.
-          </p>
-        </a>
-
-        <a
-          href="https://quizlet.com"
-          target="_blank"
-          class="group bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 flex flex-col items-center"
-          rel="noopener noreferrer"
-        >
-          <div class="w-20 h-20 mb-6 flex items-center justify-center tool-icon">
-            <i class="fas fa-flask text-6xl text-yellow-600"></i>
-          </div>
-          <h3
-            class="text-xl font-semibold text-gray-800 mb-2 group-hover:text-yellow-600 transition"
-          >
-            Quizlet
-          </h3>
-          <p class="text-gray-600">Flashcards e jogos para reforçar o aprendizado.</p>
-        </a>
-
-        <a
-          href="https://khanacademy.org"
-          target="_blank"
-          class="group bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 flex flex-col items-center"
-          rel="noopener noreferrer"
-        >
-          <div class="w-20 h-20 mb-6 flex items-center justify-center tool-icon">
-            <i class="fas fa-chalkboard-teacher text-6xl text-blue-600"></i>
-          </div>
-          <h3
-            class="text-xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition"
-          >
-            Khan Academy
-          </h3>
-          <p class="text-gray-600">
-            Plataforma educacional com vídeos e exercícios gratuitos.
-          </p>
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-gray-100 py-6 text-center text-gray-600 text-sm">
-  
-                <div class="mb-6 md:mb-0">
-                    <h4 class="text-lg font-semibold mb-4">Créditos</h4>
-                    <ul class="space-y-2">
-                        <li>Lucas</li>
-                        <li>Gustavo</li>
-                        <li>Henrique</li>
-                        <li>Raul</li>
-                        <li>Akira</li>
-                    </ul>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-robot text-2xl text-indigo-600"></i>
+                    <span class="font-semibold text-xl">IA na Educação</span>
                 </div>
-                </footer>
-<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=Gusta13/ianaeduca-o" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-gray-700 hover:text-indigo-600 transition">Início</a>
+                    <a href="#alunos" class="text-gray-700 hover:text-indigo-600 transition">Para Alunos</a>
+                    <a href="#professores" class="text-gray-700 hover:text-indigo-600 transition">Para Professores</a>
+                    <a href="#funcionamento" class="text-gray-700 hover:text-indigo-600 transition">Como Funciona</a>
+                    <a href="#vantagens" class="text-gray-700 hover:text-indigo-600 transition">Vantagens</a>
+                </div>
+                <button class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="gradient-bg text-white py-20">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">A Revolução da IA na Educação</h1>
+                <p class="text-xl mb-8">Descubra como a Inteligência Artificial está transformando a maneira como aprendemos e ensinamos, especialmente após os desafios da pandemia.</p>
+                <div class="flex space-x-4">
+                    <a href="#alunos" class="bg-white text-indigo-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition transform hover:scale-105">Para Alunos</a>
+                    <a href="#professores" class="bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-800 transition transform hover:scale-105">Para Professores</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="IA na Educação" class="rounded-xl shadow-2xl w-full max-w-md">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
+
+    <!-- How AI Helps Students -->
+    <section id="alunos" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Como a IA pode ajudar os alunos</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">A Inteligência Artificial está revolucionando a maneira como os estudantes aprendem e interagem com o conhecimento.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl transition duration-300 card-hover">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-user-graduate text-2xl text-indigo-600"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Tutores Virtuais</h3>
+                    <p class="text-gray-600">Assistentes inteligentes que respondem dúvidas 24/7, explicam conceitos complexos e adaptam o ritmo ao aluno.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl transition duration-300 card-hover">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-book-open text-2xl text-indigo-600"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Resumos Inteligentes</h3>
+                    <p class="text-gray-600">Ferramentas que identificam os pontos principais de textos longos, economizando tempo de estudo.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl transition duration-300 card-hover">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-2xl text-indigo-600"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Aprendizado Personalizado</h3>
+                    <p class="text-gray-600">Sistemas que identificam pontos fracos e sugerem exercícios específicos para cada estudante.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl transition duration-300 card-hover">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-question-circle text-2xl text-indigo-600"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Tira-dúvidas Instantâneo</h3>
+                    <p class="text-gray-600">Chatbots educacionais que respondem perguntas em tempo real, complementando o aprendizado.</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-indigo-50 rounded-xl p-8 border-l-4 border-indigo-500">
+                <div class="flex items-start">
+                    <i class="fas fa-lightbulb text-2xl text-indigo-600 mr-4 mt-1"></i>
+                    <div>
+                        <h3 class="font-bold text-xl mb-2">Exemplo Prático</h3>
+                        <p class="text-gray-700">Imagine um aluno com dificuldade em matemática. A IA pode identificar exatamente quais conceitos ele não domina, sugerir exercícios específicos, explicar de diferentes formas até que ele compreenda, e acompanhar seu progresso ao longo do tempo - tudo isso de forma personalizada!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
+
+    <!-- How AI Helps Teachers -->
+    <section id="professores" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Como a IA pode ajudar os professores</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">A Inteligência Artificial está se tornando uma poderosa aliada dos educadores, otimizando tempo e melhorando a qualidade do ensino.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white p-8 rounded-xl shadow-md transition duration-300 card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-tasks text-3xl text-indigo-600"></i>
+                        </div>
+                        <h3 class="font-bold text-xl">Criação de Atividades</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">A IA pode gerar exercícios, questões de prova e materiais didáticos personalizados para cada turma, levando em conta o nível dos alunos e os objetivos de aprendizagem.</p>
+                    <div class="bg-indigo-50 px-4 py-2 rounded-lg inline-block">
+                        <span class="text-indigo-700 font-medium">Economia de tempo: até 40% na preparação de aulas</span>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md transition duration-300 card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-check-double text-3xl text-indigo-600"></i>
+                        </div>
+                        <h3 class="font-bold text-xl">Correção Automatizada</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Sistemas de IA podem corrigir provas objetivas e até redações, identificando padrões de erros e fornecendo relatórios detalhados sobre o desempenho da turma.</p>
+                    <div class="bg-indigo-50 px-4 py-2 rounded-lg inline-block">
+                        <span class="text-indigo-700 font-medium">Feedback imediato para os alunos</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md transition duration-300 card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-chart-pie text-3xl text-indigo-600"></i>
+                        </div>
+                        <h3 class="font-bold text-xl">Análise de Desempenho</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Ferramentas analíticas identificam quais tópicos os alunos estão com mais dificuldade, permitindo que o professor ajuste seu plano de aula e ofereça reforço onde for necessário.</p>
+                    <div class="bg-indigo-50 px-4 py-2 rounded-lg inline-block">
+                        <span class="text-indigo-700 font-medium">Tomada de decisão baseada em dados</span>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md transition duration-300 card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-users text-3xl text-indigo-600"></i>
+                        </div>
+                        <h3 class="font-bold text-xl">Acompanhamento Individual</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">A IA auxilia no monitoramento do progresso de cada aluno, destacando aqueles que precisam de mais atenção e sugerindo estratégias de ensino personalizadas.</p>
+                    <div class="bg-indigo-50 px-4 py-2 rounded-lg inline-block">
+                        <span class="text-indigo-700 font-medium">Ensino mais humano e personalizado</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
+
+    <!-- How AI Works -->
+    <section id="funcionamento" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Como funciona a Inteligência Artificial</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Entenda os conceitos básicos por trás dessa tecnologia revolucionária.</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row items-center mb-16">
+                <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-8">
+                    <h3 class="text-2xl font-bold mb-4">Redes Neurais: O Cérebro da IA</h3>
+                    <p class="text-gray-600 mb-6">Assim como nossos neurônios se conectam para processar informações, as redes neurais artificiais usam camadas de "nós" que trabalham juntos para reconhecer padrões e tomar decisões.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-database text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Treinamento com Dados</h4>
+                                <p class="text-gray-600">A IA aprende analisando milhares de exemplos, identificando padrões e relações nos dados.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-project-diagram text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Vetores e Padrões</h4>
+                                <p class="text-gray-600">Informações são convertidas em representações matemáticas (vetores) que a IA pode processar.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-brain text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Aprendizado Contínuo</h4>
+                                <p class="text-gray-600">Quanto mais dados e feedback recebe, mais precisa a IA se torna em suas respostas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 neural-network" id="neuralNetwork">
+                    <!-- Neural network visualization will be inserted here by JavaScript -->
+                </div>
+            </div>
+            
+            <div class="bg-indigo-50 rounded-xl p-8">
+                <h3 class="text-2xl font-bold mb-4 text-center">Exemplo na Educação</h3>
+                <p class="text-gray-700 mb-6 text-center">Quando um sistema de IA corrige uma redação, ele compara o texto com milhares de outras redações que já analisou, identificando padrões de qualidade, erros comuns e características de bons textos. Não é magia - é matemática e muito treinamento!</p>
+                
+                <div class="flex justify-center">
+                    <div class="bg-white p-4 rounded-lg shadow-md max-w-md">
+                        <div class="flex items-center mb-2">
+                            <div class="bg-indigo-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-robot text-indigo-600"></i>
+                            </div>
+                            <h4 class="font-bold">Processo de Correção</h4>
+                        </div>
+                        <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                            <li>Análise da estrutura do texto</li>
+                            <li>Verificação de coesão e coerência</li>
+                            <li>Identificação de erros gramaticais</li>
+                            <li>Comparação com textos-modelo</li>
+                            <li>Geração de feedback construtivo</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Advantages and Care -->
+    <section id="vantagens" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Vantagens e Cuidados com a IA na Educação</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Como qualquer tecnologia poderosa, a IA traz benefícios mas também exige responsabilidade no uso.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-indigo-600 flex items-center">
+                        <i class="fas fa-check-circle mr-3"></i> Vantagens
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-green-500">
+                            <h4 class="font-bold mb-2">Personalização do Ensino</h4>
+                            <p class="text-gray-600">Adapta o ritmo e conteúdo às necessidades individuais de cada aluno.</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-green-500">
+                            <h4 class="font-bold mb-2">Acesso Democrático</h4>
+                            <p class="text-gray-600">Leva educação de qualidade a regiões com menos recursos.</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-green-500">
+                            <h4 class="font-bold mb-2">Feedback Imediato</h4>
+                            <p class="text-gray-600">Permite que alunos saibam onde erraram e como melhorar rapidamente.</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-green-500">
+                            <h4 class="font-bold mb-2">Otimização do Tempo</h4>
+                            <p class="text-gray-600">Libera professores para focar no que realmente importa: o contato humano.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-red-500 flex items-center">
+                        <i class="fas fa-exclamation-triangle mr-3"></i> Cuidados
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-red-500">
+                            <h4 class="font-bold mb-2">Dependência Tecnológica</h4>
+                            <p class="text-gray-600">A IA deve complementar, não substituir o pensamento crítico e a criatividade.</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-red-500">
+                            <h4 class="font-bold mb-2">Vieses e Erros</h4>
+                            <p class="text-gray-600">Sistemas podem reproduzir preconceitos presentes nos dados de treinamento.</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-red-500">
+                            <h4 class="font-bold mb-2">Privacidade de Dados</h4>
+                            <p class="text-gray-600">É essencial proteger as informações dos alunos e professores.</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-red-500">
+                            <h4 class="font-bold mb-2">Uso Consciente</h4>
+                            <p class="text-gray-600">A IA não deve ser usada para "colar" ou substituir o aprendizado real.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl p-8 shadow-md max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold mb-4 text-center">Conclusão: O Futuro da Educação com IA</h3>
+                <p class="text-gray-700 text-center mb-6">
+                    A Inteligência Artificial, quando usada com responsabilidade e ética, pode ser uma aliada poderosa para transformar a educação. 
+                    <span class="font-bold text-indigo-600">Não se trata de substituir professores por máquinas</span>, mas de usar a tecnologia para potencializar o que há de melhor no ensino: a capacidade de inspirar, motivar e guiar os alunos em sua jornada de aprendizado.
+                </p>
+                <div class="text-center">
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credits Section -->
+    <section class="py-16 bg-indigo-900 text-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Créditos</h2>
+                <p class="text-xl opacity-90">Projeto desenvolvido por:</p>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div class="bg-indigo-800 p-6 rounded-xl text-center hover:bg-indigo-700 transition cursor-pointer">
+                    <div class="w-20 h-20 bg-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl">Gustavo</h3>
+                    <p class="opacity-80"></p>
+                </div>
+                
+                <div class="bg-indigo-800 p-6 rounded-xl text-center hover:bg-indigo-700 transition cursor-pointer">
+                    <div class="w-20 h-20 bg-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl">Henrique</h3>
+                    <p class="opacity-80"></p>
+                </div>
+                
+                <div class="bg-indigo-800 p-6 rounded-xl text-center hover:bg-indigo-700 transition cursor-pointer">
+                    <div class="w-20 h-20 bg-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl">Lucas</h3>
+                    <p class="opacity-80"></p>
+                </div>
+                
+                <div class="bg-indigo-800 p-6 rounded-xl text-center hover:bg-indigo-700 transition cursor-pointer">
+                    <div class="w-20 h-20 bg-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl">Raul</h3>
+                    <p class="opacity-80"></p>
+                </div>
+                
+                <div class="bg-indigo-800 p-6 rounded-xl text-center hover:bg-indigo-700 transition cursor-pointer">
+                    <div class="w-20 h-20 bg-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl">Akira</h3>
+                    <p class="opacity-80"></p>
+                </div>
+            </div>
+            
+      
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 w-12 h-12 bg-indigo-600 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-indigo-700 transition opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Neural Network Visualization
+        function createNeuralNetwork() {
+            const container = document.getElementById('neuralNetwork');
+            container.innerHTML = '';
+            
+            const layers = 5;
+            const neuronsPerLayer = [3, 4, 5, 4, 3];
+            const colors = ['from-indigo-400', 'from-purple-400', 'from-blue-400', 'from-indigo-400', 'from-purple-400'];
+            
+            for (let layer = 0; layer < layers; layer++) {
+                for (let neuron = 0; neuron < neuronsPerLayer[layer]; neuron++) {
+                    const neuronEl = document.createElement('div');
+                    neuronEl.className = 'neuron';
+                    
+                    // Position neurons in layers
+                    const left = 20 + layer * 180;
+                    const top = 20 + neuron * (160 / (neuronsPerLayer[layer] - 1 || 1));
+                    
+                    neuronEl.style.left = `${left}px`;
+                    neuronEl.style.top = `${top}px`;
+                    
+                    // Add pulse animation to some neurons
+                    if (Math.random() > 0.7) {
+                        neuronEl.classList.add('pulse');
+                    }
+                    
+                    container.appendChild(neuronEl);
+                    
+                    // Create connections to next layer if exists
+                    if (layer < layers - 1) {
+                        for (let nextNeuron = 0; nextNeuron < neuronsPerLayer[layer + 1]; nextNeuron++) {
+                            const nextTop = 20 + nextNeuron * (160 / (neuronsPerLayer[layer + 1] - 1 || 1));
+                            
+                            const connection = document.createElement('div');
+                            connection.className = 'connection';
+                            
+                            const length = Math.sqrt(Math.pow(180, 2) + Math.pow(nextTop - top, 2));
+                            const angle = Math.atan2(nextTop - top, 180);
+                            
+                            connection.style.width = `${length}px`;
+                            connection.style.left = `${left + 10}px`;
+                            connection.style.top = `${top + 10}px`;
+                            connection.style.transform = `rotate(${angle}rad)`;
+                            
+                            container.appendChild(connection);
+                        }
+                    }
+                }
+            }
+        }
+        
+        // Back to Top Button
+        window.addEventListener('scroll', function() {
+            const backToTopButton = document.getElementById('backToTop');
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        document.getElementById('backToTop').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Initialize neural network on load
+        window.addEventListener('load', function() {
+            createNeuralNetwork();
+        });
+    </script>
+</body>
 </html>
